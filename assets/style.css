@@ -36,6 +36,13 @@ html {
 #nav {
     display: inline-block;
     position: absolute;
+    margin: -16px;
+}
+
+#nav .logo {
+    /* height: 43px; */
+    margin-left: 16px;
+
 }
 
 #nav > li {
@@ -164,7 +171,7 @@ html {
 }
 
 #content .content-section {
-    width: 800px;
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
@@ -195,6 +202,23 @@ html {
     text-align: justify;
     /* điều chỉnh độ cao giữa các dòng */
     line-height: 1.5;
+}
+
+#content .member-list {
+    margin-top: 48px;
+    
+}
+
+#content .member-item {
+    float: left;
+    width: calc(100% / 4);
+    text-align: center;
+}
+
+#content .member-img {
+    width: 50%;
+    height: 100%;
+    
 }
 
 
