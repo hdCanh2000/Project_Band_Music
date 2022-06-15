@@ -9,7 +9,52 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    /* hành vi khi cuộn trang */
+    scroll-behavior: smooth;
 }
+
+/* tạo hàm chuyên biệt cho các khối giống nhau trong trang */
+
+#main {
+    background-color: #ffd1d1;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+
+
+
 
 /* Phương pháp làm css?
 1. Vị trí của trang
@@ -31,22 +76,25 @@ html {
     right: 0;
     /* trục độ cao của header (giá trị từ 1-n) */
     z-index: 1;
+    /* overflow: hidden; */
+}
+
+#header .logo {
+    top: 0;
+    left: 0;
+    /* margin-right: 24px; */
 }
 
 #nav {
     display: inline-block;
     position: absolute;
-    margin: -16px;
-}
-
-#nav .logo {
-    /* height: 43px; */
-    margin-left: 16px;
-
+    right: 0;
+    margin-right: 60px;
 }
 
 #nav > li {
     display: inline-block;
+    /* float: right; */
 }
 
 #nav li {
@@ -64,7 +112,7 @@ html {
 
 /* thuộc tính bao hàm tất cả */
 #nav li a {
-    /* color: #fff; */
+    /* xóa gạch chân */
     text-decoration: none;
     line-height: 43px;
     padding: 0 24px;
@@ -73,7 +121,7 @@ html {
 
 #nav li:hover > a {
     color: #000;
-    background-color: #ccc;
+    background-color: #ffd1d1;
 }
 
 /* Cách 2
@@ -85,42 +133,54 @@ html {
 
 #nav .subnav {
     display: none;
-    min-width: 160px;
+    min-width: 150px;
     top: 100%;
     left: 0;
     position: absolute;
-    background-color: #fff;
+    background-color: #ffd1d1;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 #nav .subnav a {
     color: #000;
-    padding: 0 12px;
+    /* padding: 0 16px; */
     line-height: 32px;
 }
 
 #nav li:hover .subnav {
     display: block;
+    opacity: 0.9;
+    background-color: #e18aaa;
 }
 
 #nav .nav-icon-down {
     font-size: 12px;
 }
 
+#header .menu-mobile-btn,
 #header .search-btn {
     float: right;
     line-height: 43px;
     padding: 0 21px;
+    /* color: #fff; */
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 16px;
 }
 
+#header .menu-mobile-btn:hover {
+    color: #000!important;
+    background-color: #fff!important;
+    /* quy tắc: sử dụng thay đổi con trỏ khi đó làm phím bấm */
+    cursor: pointer;
+}
+
 #header .search-btn:hover {
-    color: #fff!important;
-    background-color: #f44336!important;
+    color: #ffd1d1!important;
+    background-color: #ffd1d1!important;
     /* quy tắc: sử dụng thay đổi con trỏ khi đó làm phím bấm */
     cursor: pointer;
 }
@@ -131,7 +191,7 @@ html {
     /* min-height: 300px; */
     margin-top: 43px;
     padding-top: 50%;
-    background-image: url(./img/blackpink-lovesick-girls-16018658643701075097820.jpg);
+    background-image: url(./img/background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -165,30 +225,36 @@ html {
 }
 
 
-
+/* Begin content */
 #content {
-
+    background-color: #ffd1d1;
 }
 
+/* begin section */
 #content .content-section {
-    width: 1100px;
+    width: 900px;
+    /* respon tablet */
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* margin-top: 42px; */
+    padding-top: 42px;
+
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 16px;
 }
 
 #content .section-heading {
     font-size: 30px;
     font-weight: 500;
-    text-align: center;
     /* khoảng cách giữa các chữ cái */
     letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 #content .section-sub-heading {
     font-size: 16px;
-    text-align: center;
-    margin: 25px 0;
+    margin: 15px 0;
     /* làm mờ (giá trị từ 0 - 1) */
     opacity: 0.5;
     /* Kiểu chữ in nghiêng */
@@ -205,24 +271,342 @@ html {
 }
 
 #content .member-list {
-    margin-top: 48px;
-    
+    margin-top: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
 }
 
 #content .member-item {
     float: left;
     width: calc(100% / 4);
-    text-align: center;
+}
+
+#content .member-name {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 #content .member-img {
-    width: 50%;
-    height: 100%;
-    
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 15px;
 }
+/* end section */
+
+/* begin tour */
+#content .tour-section {
+    background-color: #000;
+    /* ba trọn nội dung trong khung div trong trường hợp khung div cha không thể chứa div con */
+    overflow: hidden;
+    /* padding-bottom: 76px; */
+}
+
+#content .tickets-list {
+    background-color: #fff;
+    margin-top: 35px;
+    list-style-type: none;
+
+}
+
+#content .tickets-list li {
+    font-size: 15px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+#content .sold-out {
+    background-color: #f44336;
+    padding: 0 5px;
+    color: #fff;
+    margin-left: 15px;
+    float: right;
+    margin: -3px;
+    border-radius: 5%;
+    height: 24px;
+    line-height: 24px;
+}
+
+#content .quantity {
+    float: right;
+    border-radius: 5%;
+    background-color: #000;
+    padding: 0 5px;
+    /* width: 100%; */
+    height: 24px;
+    line-height: 24px;
+    /* dùng margin âm phải có float */
+    margin: -3px;
+}
+
+#content .places-list {
+    margin-top: 32px;
+    padding-bottom: 76px;
+}
+
+#content .place-item {
+    width: calc(100% / 3);
+}
+
+#content .place-img {
+    width: 100%;
+    display: block;
+    /* border-radius: 5%; */
+}
+
+#content .place-img:hover {
+    opacity: 0.5;
+}
+
+#content .place-content {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+#content .place-heading {
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#content .place-time {
+    margin: 15px 0;
+    color: #757575;
+}
+
+#content .place-about {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+#content .place-buy-btn {
+    text-decoration: none;
+    background-color: #000;
+    padding: 12px 16px;
+    /* margin-bottom: 16px; */
+    display: inline-block;
+    border: none;
+}
+
+#content .place-buy-btn:hover {
+    color: #000;
+    background-color: #e18aaa;
+    cursor: pointer;
+}
+
+/* end tour */
+
+/* Begin contact */
+
+#content .contact-content {
+    margin-top: 48px;
+    margin-bottom: 76px;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-infor i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-input {
+    font-size: 15px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form-mess {
+    margin-top: 8px;
+}
+
+.contact-submit {
+    margin-top: 16px;
+    font-size: 15px;
+    background-color: #e18aaa;
+    color: #000;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+    outline: none;
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    color: #ffd1d1;
+    background: #000;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+/* End contact */
 
 
 
 #footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #000;
+}
 
+.social-icon {
+    font-size: 24px;
+}
+
+.social-icon a {
+    text-decoration: none;
+    color: #e18aaa;
+}
+
+.social-icon a:hover {
+    color: #e18aaa;
+    opacity: 0.8;
+}
+
+.copyright {
+    color: #e18aaa;
+    margin-top: 15px;
+}
+
+.copyright a {
+    color: #e18aaa;
+    /* text-decoration: none; */
+}
+
+
+
+
+
+/* Tạo thẻ tickets */
+.modal {
+    position: fixed;
+    /* tự động phủ kín trình duyệt */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* khối con nằm giữa chiều cao của cha */
+    align-items: center;
+    /* khối con nằm giữa chiều ngang của cha */
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container {
+    width: 900px;
+    /* reponsive cơ bản */
+    max-width: calc(100% - 32px);
+    background: #fff;
+    min-height: 200px;
+    position: relative;
+    /* tọa hiệu ứng chuyển động (điều kiện: phải có keyframes) */
+    animation: modalInput ease 0.5s;
+}
+
+.modal .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 10px;
+    /* chuyển con trỏ chuột về nút bấm */
+    cursor: pointer;
+}
+
+.modal .modal-header {
+    background: #e18aaa;
+    height: 100px;
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-header-icon {
+    margin-right: 16px;
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.modal .modal-content {
+    border: 16px solid #e18aaa;
+    border-top: 0;
+}
+
+.modal .modal-body {
+    padding: 0 16px 16px 16px;
+}
+
+.modal .modal-label {
+    display: block;
+    font-size: 18px;
+    padding: 18px 0 8px 0;
+}
+
+.modal .modal-input {
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    border: #000 solid;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
+.modal #buy-tickets {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px;
+    width: 100%;
+    margin: 16px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #e18aaa;
+    cursor: pointer;
+}
+
+.modal #buy-tickets:hover {
+    opacity: 0.8;
+}
+
+.modal .modal-footer {
+    padding: 8px;
+    text-align: right;
+}
+
+.modal >a {
+    color: #e18aaa;
+}
+
+
+
+
+
+/* chuyển động hiển thị vào của form ticket */
+@keyframes modalInput {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

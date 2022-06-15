@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <link rel="icon" href="./assets/img/imager_2_82894_700.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <title>BlackPink Band</title>
 </head>
 <body>
     <div id="main">
         <!-- Begin: HEADER -->
         <div id="header">
-
+            <a href="#"> 
+            <img class="logo" src="/assets/img/Logo_of_Blackpink_194px.svg.png" alt="">
+            </a>
             <!-- Begin: nav -->
             <ul id="nav">
-                <li>
-                    <img class="logo" src="/assets/img/Logo_of_Blackpink_194px.svg.png" alt="">
-                </li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="">
                         LISTEN ON 
@@ -41,6 +41,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+
+            <!-- <div id="mobile-menu" class="menu-icon menu-mobile-btn">
+                <i class="ti-menu"></i>
+            </div> -->
             <!-- End: Search -->
 
         </div>
@@ -57,12 +61,12 @@
 
         <div id="content">
             <!-- about section -->
-            <div class="content-section">
-                <h2 class="section-heading">BLACKPINK BAND</h2>
-                <p class="section-sub-heading">We love musics</p>
+            <div id="band" class="content-section">
+                <h2 class="text-center section-heading">BLACKPINK BAND</h2>
+                <p class="text-center section-sub-heading">We love musics</p>
                 <p class="about-text">"THE ALBUM", the official debut album of BLACKPINK who grew as global artists since their debut back in 2016 through "SQUARE ONE", will be released on October 2nd. "Lovesick Girls", the title song of BLACKPINK's "THE ALBUM", is composed of country - style guitar riffs with a refined melodies that leads the overall mood of the song, and the powerful vocals of BLACKPINK with the retro sound raise the tension of the song. The lyrics of the song question why people still look for new love despite their wounds and pain. The fact that members JISOO and JENNIE participated in the composing and writing of the song each for the first time raises the fans anticipation. Apart from "Lovesick Girls", the album contains BLACKPINK's unique characters and sounds, from the charismatic Hip - hop sounds of "How You Like That" which proved the group's global influence, to the exciting and poppy melodies of "Ice Cream" which also features a Popstar, Selena Gomez. BLACKPINK's" THE ALBUM will present the group's boundless musical spectrums.</p>
 
-                <div class="member-list">
+                <div class="text-center member-list">
                     <div class="member-item">
                         <p class="member-name">Lisa</p>
                         <img src="./assets/img/Lía.jpg" alt="" class="member-img">
@@ -84,24 +88,199 @@
             </div>
 
             <!-- Tour section -->
-            <div class="content-section">
-                <h2 class="section-heading">TOUR DATES</h2>
-                <p class="section-sub-heading">Remember to book your tickets!</p>
+            <div id="tour" class="tour-section">
+                <div class="content-section">
+                    <h2 class="text-center section-heading text-white">In Your Area World Tour DATES</h2>
+                    <p class="text-center section-sub-heading text-white">Remember to book your tickets!</p>
 
-                
+                    <ul class="tickets-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity text-white">31032000</span></li>
+                    </ul>
+
+                    <div class="row text-center places-list">
+                        <div class="col place-item">
+                            <img src="./assets/img/north-america-tour.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">North America</h3>
+                                <p class="place-time">Fri 27 Nov 2021</p>
+                                <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-buy-ticket text-white">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="col place-item">
+                            <img src="./assets/img/vietnam-tour.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">Viet Nam</h3>
+                                <p class="place-time">Fri 25 Nov 2022</p>
+                                <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-buy-ticket text-white">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="col place-item">
+                            <img src="./assets/img/europe-tour.jpg" alt="" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">Europe</h3>
+                                <p class="place-time">Fri 20 Nov 2021</p>
+                                <p class="place-about">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-buy-btn js-buy-ticket text-white">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <!-- <div class="clear"></div> -->
+                    </div>
+
+                </div>
             </div>
 
-            <div class="content-section">
-                <h2 class="section-heading">CONTACT</h2>
-                <p class="section-sub-heading">Fan? Drop a note!</p>
+            <!-- begin contact -->
+            <div id="contact" class="content-section">
+                <h2 class="text-center section-heading">CONTACT</h2>
+                <p class="text-center section-sub-heading">Fan? Drop a note!</p>
+
+                <div class="row contact-content">
+                    <div class="col col-half contact-infor">
+                        <p><i class="ti-location-pin"></i>Mapo-gu, Seoul, Korea</p>
+                        <p><i class="ti-mobile"></i>Phone: +0123456789</p>
+                        <p><i class="ti-email"></i>Email: yg@gmail.com</p>
+                    </div>
+
+                    <div class="col col-half contact-input">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" required name="" placeholder="Name" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" required name="" placeholder="Email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row contact-form-mess">
+                                <div class="col col-full">
+                                    <input type="text" required name="" placeholder="Message" class="form-control">
+                                </div>
+                            </div>
+                            <input class="contact-submit" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end contact -->
+            <div class="map-section">
+                <img src="./assets/img/EikuqLWVoAAnPzA.jpg" alt="">
             </div>
         </div>
 
         
         <div id="footer">
-            
+            <div class="social-icon">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright"> Powered by <a href="">HDC Entertaiment</a></p>
         </div>
     </div>
+
+
+
+
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-header-icon ti-ticket"></i>
+                Tickets
+            </header>
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <label for="ticket-quantity" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+    
+                    <label for="ticket-email" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
+    
+                    <button id="buy-tickets">Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <p class="modal-help">Need
+                        <a href="">help?</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        // const: biến, hằng số
+
+        // Begin pay tickets
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        // hàm hiển thị modal mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // hàm ẩn modal mua vé (gỡ bỏ class open khỏi modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        // lặp lại qua từng thẻ button và theo dõi hành vi click của người dùng
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        // theo dõi hành vi click vào button close
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        // theo dõi hành vi click vào vùng trống để đóng buy ticket
+        modal.addEventListener('click', hideBuyTickets)
+
+        // hủy bỏ lệnh thoát ở trên trong vùng container
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+        // End pay tickets
+
+        // Begin responsive mobile
+        // var header = document.getElementById('header');
+        // var mobileMenu = document.getElementById('mobile-menu');
+        
+        // mobileMenu.onclick = function() {
+        //     var isClosed = header.clientHeight === 43;
+        //     if (isClosed) {
+        //         header.style.height = 'auto';
+        //     } else {
+        //         header.style.height = null;
+        //     }
+        // }
+        // End responsive mobile
+
+    </script>
+
 </body>
 </html>
 
