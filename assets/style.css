@@ -1,7 +1,6 @@
 /* reset css */
 
 * {
-    /* viết tắt kiểu emmet */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,11 +8,8 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
-    /* hành vi khi cuộn trang */
     scroll-behavior: smooth;
 }
-
-/* tạo hàm chuyên biệt cho các khối giống nhau trong trang */
 
 #main {
     background-color: #ffd1d1;
@@ -56,33 +52,20 @@ html {
 
 
 
-/* Phương pháp làm css?
-1. Vị trí của trang
-2. Kích thước trang (width và height)
-3. Màu sắc
-4. Kiểu dáng (font chữ, hình tròn, hình cung,...)
-*/
-
-
-
 /* Begin Main */
 #header {
     height: 43px;
     background-color: #000;
-    /* giữ cho header cố định đầu trang */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    /* trục độ cao của header (giá trị từ 1-n) */
     z-index: 1;
-    /* overflow: hidden; */
 }
 
 #header .logo {
     top: 0;
     left: 0;
-    /* margin-right: 24px; */
 }
 
 #nav {
@@ -94,25 +77,19 @@ html {
 
 #nav > li {
     display: inline-block;
-    /* float: right; */
 }
 
 #nav li {
-    /* display: inline-block; */
     position: relative;
     list-style-type: none;
 }
 
-/* Thuộc tính cấp 1 ko ảnh hướng css đến con cấp 2-3-4 */
 #nav > li > a {
     color: #fff;
-    /* viết hoa toàn bộ */
     text-transform: uppercase;
 }
 
-/* thuộc tính bao hàm tất cả */
 #nav li a {
-    /* xóa gạch chân */
     text-decoration: none;
     line-height: 43px;
     padding: 0 24px;
@@ -123,13 +100,6 @@ html {
     color: #000;
     background-color: #ffd1d1;
 }
-
-/* Cách 2
-#nav > li:hover > a,
-#nav .subnav li:hover a {
-    color: #000;
-    background-color: #ccc;
-} */
 
 #nav .subnav {
     display: none;
@@ -143,7 +113,6 @@ html {
 
 #nav .subnav a {
     color: #000;
-    /* padding: 0 16px; */
     line-height: 32px;
 }
 
@@ -157,38 +126,26 @@ html {
     font-size: 12px;
 }
 
-#header .menu-mobile-btn,
 #header .search-btn {
     float: right;
     line-height: 43px;
     padding: 0 21px;
-    /* color: #fff; */
 }
 
-#header .menu-icon,
 #header .search-icon {
-    color: #fff;
+    color: #000;
     font-size: 16px;
-}
-
-#header .menu-mobile-btn:hover {
-    color: #000!important;
-    background-color: #fff!important;
-    /* quy tắc: sử dụng thay đổi con trỏ khi đó làm phím bấm */
-    cursor: pointer;
 }
 
 #header .search-btn:hover {
     color: #ffd1d1!important;
     background-color: #ffd1d1!important;
-    /* quy tắc: sử dụng thay đổi con trỏ khi đó làm phím bấm */
     cursor: pointer;
 }
 
 
 
 #slider {
-    /* min-height: 300px; */
     margin-top: 43px;
     padding-top: 50%;
     background-image: url(./img/background.png);
@@ -203,23 +160,16 @@ html {
     bottom: 48px;
     color: #fff;
     width: 100%;
-    /* left: 0;
-    right: 0; */
-    /* căn giữa với position
-     left: 50%;
-    transform: translateX(-50%); */
     text-align: center;
 }
 
 #slider .text-heading {
-    /* giảm độ dày chữ */
     font-weight: 500;
     font-size: 24px;
     margin: 10px 0;
 }
 
 #slider .text-description {
-    /* position: absolute; */
     font-size: 15px;
     margin: 15px 0;
 }
@@ -233,13 +183,10 @@ html {
 /* begin section */
 #content .content-section {
     width: 900px;
-    /* respon tablet */
     max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
-    /* margin-top: 42px; */
     padding-top: 42px;
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -247,7 +194,6 @@ html {
 #content .section-heading {
     font-size: 30px;
     font-weight: 500;
-    /* khoảng cách giữa các chữ cái */
     letter-spacing: 5px;
     text-transform: uppercase;
 }
@@ -255,18 +201,14 @@ html {
 #content .section-sub-heading {
     font-size: 16px;
     margin: 15px 0;
-    /* làm mờ (giá trị từ 0 - 1) */
     opacity: 0.5;
-    /* Kiểu chữ in nghiêng */
     font-style: italic;
 
 }
 
 #content .about-text {
     font-size: 15px;
-    /* căn đều 2 bên đoạn văn */
     text-align: justify;
-    /* điều chỉnh độ cao giữa các dòng */
     line-height: 1.5;
 }
 
@@ -296,9 +238,7 @@ html {
 /* begin tour */
 #content .tour-section {
     background-color: #000;
-    /* ba trọn nội dung trong khung div trong trường hợp khung div cha không thể chứa div con */
     overflow: hidden;
-    /* padding-bottom: 76px; */
 }
 
 #content .tickets-list {
@@ -332,10 +272,8 @@ html {
     border-radius: 5%;
     background-color: #000;
     padding: 0 5px;
-    /* width: 100%; */
     height: 24px;
     line-height: 24px;
-    /* dùng margin âm phải có float */
     margin: -3px;
 }
 
@@ -351,7 +289,6 @@ html {
 #content .place-img {
     width: 100%;
     display: block;
-    /* border-radius: 5%; */
 }
 
 #content .place-img:hover {
@@ -384,7 +321,6 @@ html {
     text-decoration: none;
     background-color: #000;
     padding: 12px 16px;
-    /* margin-bottom: 16px; */
     display: inline-block;
     border: none;
 }
@@ -480,7 +416,6 @@ html {
 
 .copyright a {
     color: #e18aaa;
-    /* text-decoration: none; */
 }
 
 
@@ -490,15 +425,12 @@ html {
 /* Tạo thẻ tickets */
 .modal {
     position: fixed;
-    /* tự động phủ kín trình duyệt */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.3);
-    /* khối con nằm giữa chiều cao của cha */
     align-items: center;
-    /* khối con nằm giữa chiều ngang của cha */
     justify-content: center;
     display: none;
 }
@@ -509,12 +441,10 @@ html {
 
 .modal .modal-container {
     width: 900px;
-    /* reponsive cơ bản */
     max-width: calc(100% - 32px);
     background: #fff;
     min-height: 200px;
     position: relative;
-    /* tọa hiệu ứng chuyển động (điều kiện: phải có keyframes) */
     animation: modalInput ease 0.5s;
 }
 
@@ -524,7 +454,6 @@ html {
     top: 0;
     color: #fff;
     padding: 10px;
-    /* chuyển con trỏ chuột về nút bấm */
     cursor: pointer;
 }
 
