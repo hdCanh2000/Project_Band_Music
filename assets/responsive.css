@@ -1,26 +1,101 @@
-/* mobile 
+/* mobile  */
 @media (max-width: 740px) {
     #nav > li {
-        display: block;
-    }
-
-    #header {
-        overflow: hidden;
-    }
-
-    #header .search-btn {
         display: none;
     }
+    .slideshow-container {
+        padding-top: 41px;
+    }
+    .slideshow-container div {
+        display: none;
+    }
+    #content .section-heading {
+        font-size: 20px;
+    }
+    #content .about-text {
+        text-indent: 30px;
+    }
+    #content .member-list {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 12px;
+        text-align: center;
+    }
+    .content-section {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    #content .member-img {
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .contact-content {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        text-align: center;
+        justify-content: center;
+    }
+    .col {
+        float: center;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .place-item {
+        width: calc(100% / 1);
+    }
+    .col-half {
+        width: 100%;
+    }
+    .padding {
+        padding-top: 8px;
+    }
+    .col-full {
+        width: 100vw;
+    }
+    .contact-submit {
+        width: 100%;
+        font-weight: 700;
+    }
+    .places-list {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 16px;
+    }
 }
 
-/* table 
+/*  table  */
 @media (min-width: 740px) and (max-width: 1023px) {
-
+    #nav li a {
+        text-decoration: none;
+        line-height: 43px;
+        padding: 0 16px;
+        display: block;
+    }
+    .dropdown {
+        display: none;
+    }
+    .place-item {
+        width: calc(100% / 3);
+    }
 }
 
-/* PC 
+/*  PC  */
 @media (min-width: 1024px) {
     #content .conten-section {
         padding-top: 42px;
     }
-}*/
+    .dropdown {
+        display: none;
+    }
+    .place-item {
+        width: calc(100% / 3);
+    }
+}

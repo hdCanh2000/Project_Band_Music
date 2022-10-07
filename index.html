@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/img/imager_2_82894_700.jpg" type="image/x-icon">
+    <link rel="icon" href="./assets/img/iconlogo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./assets/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
@@ -36,69 +36,74 @@
                 </li>
             </ul>
             <!-- End: Nav -->
-
-            <!-- Begin: Search -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"></i>
+            <div  class=" dropdown menu-mobile-btn">
+                <button 
+                    id="mobile-menu" 
+                    class="dropbtn" 
+                    onclick="myFunction()"
+                >
+                    <i class=" ti-angle-down"></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#band">Band</a>
+                    <a href="#tour">Tour</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-
-            <!-- <div id="mobile-menu" class="menu-icon menu-mobile-btn">
-                <i class="ti-menu"></i>
-            </div> -->
-            <!-- End: Search -->
-
         </div>
         <!-- End: HEADER -->
-
         <!-- Begin: SLIDER -->
-        <div id="slider">
-            <div class="text-content">
-                <h2 class="text-hearding">VIET NAM</h2>
-                <div class="text-description">Blackpink in Your Area</div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./assets/img/background.png" style="width:100%">
+                <div class="text">BLACKPINK in Your Area</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./assets/img/background2.jpg" style="width:100%">
+                <div class="text">BLACKPINK Tour</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./assets/img/background3.jpg" style="width:100%">
+                <div class="text">BLACKPINK Concert</div>
             </div>
         </div>
         <!-- End: SLIDER -->
-
         <div id="content">
             <!-- about section -->
             <div id="band" class="content-section">
                 <h2 class="text-center section-heading">BLACKPINK BAND</h2>
                 <p class="text-center section-sub-heading">We love musics</p>
-                <p class="about-text">"THE ALBUM", the official debut album of BLACKPINK who grew as global artists since their debut back in 2016 through "SQUARE ONE", will be released on October 2nd. "Lovesick Girls", the title song of BLACKPINK's "THE ALBUM", is composed of country - style guitar riffs with a refined melodies that leads the overall mood of the song, and the powerful vocals of BLACKPINK with the retro sound raise the tension of the song. The lyrics of the song question why people still look for new love despite their wounds and pain. The fact that members JISOO and JENNIE participated in the composing and writing of the song each for the first time raises the fans anticipation. Apart from "Lovesick Girls", the album contains BLACKPINK's unique characters and sounds, from the charismatic Hip - hop sounds of "How You Like That" which proved the group's global influence, to the exciting and poppy melodies of "Ice Cream" which also features a Popstar, Selena Gomez. BLACKPINK's" THE ALBUM will present the group's boundless musical spectrums.</p>
-
+                <p class="about-text">
+                    "THE ALBUM", the official debut album of BLACKPINK who grew as global artists since their debut back in 2016 through "SQUARE ONE", will be released on October 2nd. "Lovesick Girls", the title song of BLACKPINK's "THE ALBUM", is composed of country - style guitar riffs with a refined melodies that leads the overall mood of the song, and the powerful vocals of BLACKPINK with the retro sound raise the tension of the song. The lyrics of the song question why people still look for new love despite their wounds and pain. The fact that members JISOO and JENNIE participated in the composing and writing of the song each for the first time raises the fans anticipation. 
+                <br>
+                    <p class="about-text">
+                        Apart from "Lovesick Girls", the album contains BLACKPINK's unique characters and sounds, from the charismatic Hip - hop sounds of "How You Like That" which proved the group's global influence, to the exciting and poppy melodies of "Ice Cream" which also features a Popstar, Selena Gomez. BLACKPINK's" THE ALBUM will present the group's boundless musical spectrums.
+                    </p>
+                </p>
                 <div class="text-center member-list">
-                    <div class="member-item">
-                        <p class="member-name">Lisa</p>
+                    <div class="members">
                         <img src="./assets/img/Lía.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
-                        <p class="member-name">Jisoo</p>
+                    <div class="members">
                         <img src="./assets/img/Jisô.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
-                        <p class="member-name">Jennie</p>
+                    <div class="members">
                         <img src="./assets/img/zenly.jpg" alt="" class="member-img">
                     </div>
-                    <div class="member-item">
-                        <p class="member-name">Rosé</p>
+                    <div class="members">
                         <img src="./assets/img/Rose.jpg" alt="" class="member-img">
                     </div>
                 </div>
-
             </div>
-
             <!-- Tour section -->
             <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="text-center section-heading text-white">In Your Area World Tour DATES</h2>
                     <p class="text-center section-sub-heading text-white">Remember to book your tickets!</p>
-
-                    <ul class="tickets-list">
-                        <li>September <span class="sold-out">Sold out</span></li>
-                        <li>October <span class="sold-out">Sold out</span></li>
-                        <li>November <span class="quantity text-white">31032000</span></li>
-                    </ul>
-
                     <div class="row text-center places-list">
                         <div class="col place-item">
                             <img src="./assets/img/north-america-tour.jpg" alt="" class="place-img">
@@ -129,29 +134,25 @@
                         </div>
                         <!-- <div class="clear"></div> -->
                     </div>
-
                 </div>
             </div>
-
             <!-- begin contact -->
             <div id="contact" class="content-section">
                 <h2 class="text-center section-heading">CONTACT</h2>
                 <p class="text-center section-sub-heading">Fan? Drop a note!</p>
-
                 <div class="row contact-content">
                     <div class="col col-half contact-infor">
                         <p><i class="ti-location-pin"></i>Mapo-gu, Seoul, Korea</p>
                         <p><i class="ti-mobile"></i>Phone: +0123456789</p>
                         <p><i class="ti-email"></i>Email: yg@gmail.com</p>
                     </div>
-
                     <div class="col col-half contact-input">
                         <form action="">
                             <div class="row">
                                 <div class="col col-half">
                                     <input type="text" required name="" placeholder="Name" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half padding">
                                     <input type="email" required name="" placeholder="Email" class="form-control">
                                 </div>
                             </div>
@@ -170,8 +171,6 @@
                 <img src="./assets/img/EikuqLWVoAAnPzA.jpg" alt="">
             </div>
         </div>
-
-        
         <div id="footer">
             <div class="social-icon">
                 <a href=""><i class="ti-facebook"></i></a>
@@ -181,39 +180,30 @@
                 <a href=""><i class="ti-twitter"></i></a>
                 <a href=""><i class="ti-linkedin"></i></a>
             </div>
-            <p class="copyright"> Powered by <a href="https://www.facebook.com/hdcanh2k">HDC Entertaiment</a></p>
+            <p class="copyright"> Powered by <a href="https://www.facebook.com/hdcanh2k">YG Entertaiment</a></p>
         </div>
     </div>
-
-
-
-
-
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
-
             <header class="modal-header">
                 <i class="modal-header-icon ti-ticket"></i>
                 Tickets
             </header>
-
             <div class="modal-content">
                 <div class="modal-body">
                     <label for="ticket-quantity" class="modal-label">
                         <i class="ti-shopping-cart"></i>
-                        Tickets, $15 per person
+                        Tickets, $20 per person
                     </label>
                     <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
-    
                     <label for="ticket-email" class="modal-label">
                         <i class="ti-user"></i>
                         Send to
                     </label>
                     <input id="ticket-email" type="email" class="modal-input" placeholder="Enter email...">
-    
                     <button id="buy-tickets">Pay
                         <i class="ti-check"></i>
                     </button>
@@ -224,46 +214,58 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
-
     <script>
-
-        // Begin pay tickets
+        // Responsive menu
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        // Action buy ticket
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
-
-        // hàm hiển thị modal mua vé (thêm class open vào modal)
         function showBuyTickets() {
             modal.classList.add('open')
         }
-
-        // hàm ẩn modal mua vé (gỡ bỏ class open khỏi modal)
         function hideBuyTickets() {
             modal.classList.remove('open')
         }
-
-        // lặp lại qua từng thẻ button và theo dõi hành vi click của người dùng
         for(const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
-
-        // theo dõi hành vi click vào button close
         modalClose.addEventListener('click', hideBuyTickets)
-
-        // theo dõi hành vi click vào vùng trống để đóng buy ticket
         modal.addEventListener('click', hideBuyTickets)
-
-        // hủy bỏ lệnh thoát ở trên trong vùng container
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
-        // End pay tickets
-
-    </script>
-
+        // Slide show
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2500);
+        }
+    </script>    
 </body>
 </html>
